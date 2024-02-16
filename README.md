@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE : 16/02/2024
+## NAME : MARXIN LIJO M																		             
+## ROLLNUMBER : 212223240085
+## DEPARTMENT : ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
 
 
 ## AIM:
@@ -53,33 +53,44 @@ FIGURE-02
 
 
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
-
-
-
-FIGURE -03
-
-
-
+![Screenshot 2024-02-16 160936](https://github.com/MARXINLIJO/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/145742540/42734a1d-b7f7-453f-ba0b-4a3ffb592e98)
 
 ## PROGRAM 
- 
- 
+```
+int led=3;
+int pushbutton=4;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  pinMode(pushbutton,INPUT);
+}
 
-
-
-
-
-
-
-
-
- 
- 
- 
-
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+  {
+  digitalWrite(led,HIGH);
+  delay(500); // Wait for 1000 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(500); // Wait for 1000 millisecond(s)
+  }
+  else
+  {
+      digitalWrite(led, LOW);
+      delay(500);
+  }
+}
+```
 
 
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+### IN ON CONDITION
+![Screenshot 2024-02-16 160722](https://github.com/MARXINLIJO/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/145742540/41868423-f1de-448a-b442-1380a1227075)
+
+### IN OFF CONDITION
+![Screenshot 2024-02-16 160739](https://github.com/MARXINLIJO/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/145742540/740e23ae-2a91-4183-b45e-614a71163bdb)
+
 
